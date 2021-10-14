@@ -36,9 +36,9 @@ def calculator(number1, number2, operator):
         return number1 - number2
     elif operator == '*':
         return number1 * number2
-    elif operator == '/':
+    elif operator == '/' and number2 != 0:
         return number1 / number2
-    elif operator == '//':
+    elif operator == '//' and number2 != 0:
         return number1 // number2
     elif operator == '**':
         return number1 ** number2
@@ -58,7 +58,7 @@ def parse_input():
     >>> parse_input()
     Enter equation: 12 * 4.2
     50.400000000000006
-    
+
     >>> parse_input()
     Enter equation: 10 ** 2
     100.0
