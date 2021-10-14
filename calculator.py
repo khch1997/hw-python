@@ -1,9 +1,4 @@
 def calculator(number1, number2, operator):
-    operators = ['+', '-', '*', '/', '//', '**']
-    
-    if operator not in operators:
-        return False
-
     if operator == '+':
         return number1 + number2
     elif operator == '-':
@@ -16,6 +11,8 @@ def calculator(number1, number2, operator):
         return number1 // number2
     elif operator == '**':
         return number1 ** number2
+    else:
+        return False
 
 def parse_input():
     equation = input('Enter equation: ')
