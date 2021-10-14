@@ -17,6 +17,8 @@ def tripler(func):
     Hello
     Hello
     """
-    func()
-    func()
-    func()
+    def wrapper():
+      func()
+      func()
+      func()
+    return wrapper
