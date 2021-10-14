@@ -17,8 +17,9 @@ def calculate_time(func):
     >>> calculate_time(func)
     2.0001738937
     """
-    if func is not None:
+    def wrapper():
         current = time.time()
         func()
         end = time.time()
         print(f'Total time {end - current}')
+    return wrapper
