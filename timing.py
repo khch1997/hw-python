@@ -11,6 +11,9 @@ def calculate_time(func):
 
     Examples
     --------
+    def func():
+        time.sleep(2)
+        
     >>> calculate_time(func)
     2.0001738937
     """
