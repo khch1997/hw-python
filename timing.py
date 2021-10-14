@@ -13,11 +13,12 @@ def calculate_time(func):
     --------
     def func():
         time.sleep(2)
-        
+
     >>> calculate_time(func)
     2.0001738937
     """
-    current = time.time()
-    func()
-    end = time.time()
-    print(f'Total time {end - current}')
+    if func is not None:
+        current = time.time()
+        func()
+        end = time.time()
+        print(f'Total time {end - current}')
